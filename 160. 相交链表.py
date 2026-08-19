@@ -6,7 +6,7 @@ class ListNode:
         self.next = None
 
 class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Union[ListNode, None]:
         """
         :param headA: 链表A的头节点
         :param headB: 链表B的头节点
