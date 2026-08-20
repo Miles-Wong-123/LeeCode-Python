@@ -1,6 +1,5 @@
-from typing import List
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height: list[int]) -> int:
         """
         :param height: 高度数组
         :return: 最大容器的面积
