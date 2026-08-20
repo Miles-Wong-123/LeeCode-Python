@@ -1,7 +1,5 @@
-from typing import List
-
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
         """
         使用字典一次遍历解决两数之和问题。
         
@@ -12,14 +10,18 @@ class Solution:
         """
         seen = {}  # 值 -> 下标
 
-        for i, num in enumerate(nums):
+        index = 0
+        while index < len(nums):
+            num = nums[index]
             complement = target - num
 
             if complement in seen:
-                return [seen[complement], i]
+                return [seen[complement], index]
 
-            seen[num] = i
-
+            seen[num] = index
+            
+            index += 1
+        
         # 理论上不会走到这里，因为题目保证有解
         return []
 
